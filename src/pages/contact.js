@@ -10,7 +10,8 @@ class Contact extends React.Component {
                 name='contact'
                 method='post'
                 data-netlify='true'
-                data-netlify-honeypot='bot-field'>
+                data-netlify-honeypot='bot-field'
+                netlify>
                 <input
                 name='name'
                 type='text'
