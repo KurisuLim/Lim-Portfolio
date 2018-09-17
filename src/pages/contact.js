@@ -8,11 +8,12 @@ const Contact = ()=> (
 //         return (
             <container>
             <h2>Contact Form</h2>
-                <form
-                name='contact'
-                method='POST'
-                action='/success'
-                netlify>
+            <form
+            name="contact-form"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            >
                 <input
                 name='name'
                 type='text'
