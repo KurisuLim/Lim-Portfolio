@@ -31,7 +31,8 @@ class Contact extends React.Component {
                 required
                 />
                 <br/>
-                <button>
+                <button
+                type='submit'>
                     Send Message
                 </button>
                 </form>
