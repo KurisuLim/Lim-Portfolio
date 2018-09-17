@@ -34,6 +34,11 @@ class Portfolio extends React.Component{
                 projectPicture="https://lh3.googleusercontent.com/09a4ddit1zO4Qns_3zjhO7bgUIGDs9Hb1EInLPq8p-yP5__Jt78piHWMojxYTo8e9we3cePYhxv44A1UuXEU6mxBiQ"
                 excerpt="Weather App."
                 />
+                <Project
+                projectName="Weather App"
+                projectPicture="https://lh3.googleusercontent.com/09a4ddit1zO4Qns_3zjhO7bgUIGDs9Hb1EInLPq8p-yP5__Jt78piHWMojxYTo8e9we3cePYhxv44A1UuXEU6mxBiQ"
+                excerpt="Weather App."
+                />
             </Container>
         )
     }

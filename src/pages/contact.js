@@ -32,6 +32,7 @@ class Contact extends React.Component {
                 required
                 />
                 <br/>
+                <div data-netlify-recaptcha></div>
                 <button
                 type='submit'>
                     Send Message
