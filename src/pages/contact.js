@@ -7,7 +7,7 @@ class Contact extends React.Component {
             <container>
             <h2>Contact Form</h2>
                 <form
-                name='contact-form'
+                name='contact'
                 method='POST'
                 action='/success'
                 netlify>
