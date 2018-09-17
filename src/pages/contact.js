@@ -22,13 +22,13 @@ class Contact extends React.Component {
                 <input
                 name='email'
                 type='email'
-                placeholder='Your Email'
+                placeholder='name@name.com'
                 required
                 />
                 <br/>
-                <input
+                <textarea
                 name='message'
-                type='textarea'
+                type='text'
                 placeholder='Message'
                 required
                 />
