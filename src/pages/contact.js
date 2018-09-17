@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-class Contact extends React.Component {
-    render() {
-        return (
+const Contact = ()=> (
+// class Contact extends React.Component {
+
+//     render() {
+//         return (
             <container>
             <h2>Contact Form</h2>
                 <form
@@ -39,7 +41,9 @@ class Contact extends React.Component {
                 </button>
                 </form>
             </container>
-        )
-    }
-}
-export default Contact;
+//         )
+//     }
+// }
+// export default Contact;
+)
+export default Contact
