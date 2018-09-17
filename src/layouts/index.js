@@ -1,9 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
 
 import Header from '../components/header'
 import './index.scss'
+
+const ListLink = props =>
+  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+    <Link to={props.to}>
+      {props.children}
+    </Link>
+  </li>
 
 const Layout = ({ children, data }) => (
   <div>
