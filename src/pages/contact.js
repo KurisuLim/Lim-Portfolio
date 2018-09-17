@@ -1,15 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-//const Contact = ()=> (
 class Contact extends React.Component {
     render() {
         return (
     <div>
         <h2>Contact Form</h2>
-        <form
-        name="contact-form"
-        method="post"
+        <form name="contact-form" method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         netlify
@@ -46,5 +43,3 @@ class Contact extends React.Component {
     }
 }
 export default Contact;
-// )
-// export default Contact
