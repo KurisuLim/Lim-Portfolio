@@ -9,6 +9,7 @@ class Contact extends React.Component {
                 <form
                 name='contact-form'
                 method='POST'
+                action='/success'
                 netlify>
                 <input
                 name='name'

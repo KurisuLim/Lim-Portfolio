@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
         <h2 style={{ display: `inline` }}>{siteTitle}</h2>
       </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
+      <ul style={{ listStyle: `none`, float: `right`, textDecoration: `none` }}>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/portfolio/">Portfolio</ListLink>
         <ListLink to="/blog/">Blog</ListLink>

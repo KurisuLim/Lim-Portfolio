@@ -4,6 +4,6 @@ import lawtonTheme from 'typography-theme-lawton';
 import fairyGatesTheme from 'typography-theme-fairy-gates';
 
 //bootstrap,lawton and fairGates are css text theme
-const typography = new Typography(bootstrapTheme);
+const typography = new Typography(lawtonTheme);
 
 export default typography;
