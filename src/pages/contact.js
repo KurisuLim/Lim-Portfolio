@@ -13,7 +13,7 @@ render() {
             </div>
         <div class='row'>
         <div class='column'>
-        <form name="contact-form" method="POST" data-netlify='true' data-netlify-honeypot='bot-field' netlify>
+        <form name="contact-forms" method="POST" data-netlify='true' data-netlify-honeypot='bot-field' netlify>
             <p>
                 <label>Your Name: <input type="text" name="name" required/></label>   
             </p>
