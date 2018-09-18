@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
         padding: '3.45rem 1.0875rem',
       }}
     >
-    <header style={{ marginBottom: `5.5rem` }}>
+    <header style={{ marginBottom: `none` }}>
       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
         <h2 style={{ display: `inline` }}>{siteTitle}</h2>
       </Link>

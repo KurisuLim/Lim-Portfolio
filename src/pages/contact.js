@@ -1,43 +1,19 @@
 import React from 'react'
 import  "./contact-css-modules.module.css";
-import GoogleMapReact from 'google-map-react';
-
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+import { withGoogleMap, GoogleMap } from 'react-google-maps';
 
 class Contact extends React.Component {
-    static defaultProps = {
-        center: {
-        lat: 59.95,
-        lng: 30.33
-    },
-    zoom: 11
-    };
 
 render() {
     return (
         <div class='container'>
             <div style={{ textAlign:`center`}}>
-                <h2>Contact Us</h2>
-                <p>Swing by for a cup of coffee, or leave us a message:</p>
+                <h2>Contact</h2>
+                <p>Swing by for a cup of coffee, or leave me a message:</p>
             </div>
         <div class='row'>
-            <div class='column'>
-            <div style={{ height: '100vh', width: '100%' }}>
-                <GoogleMapReact
-                bootstrapURLKeys={{ key: `${process.env.GOOGLE_API}` }}
-                defaultCenter={this.props.center}
-                defaultZoom={this.props.zoom}
-                >
-                <AnyReactComponent
-                    lat={59.955413}
-                    lng={30.337844}
-                    text={'Kreyser Avrora'}
-                />
-                </GoogleMapReact>
-            </div>
-            </div>
         <div class='column'>
-        <form name="contact-form" method="POST" netlify>
+        <form name="contact-form" method="POST" data-netlify='true' data-netlify-honeypot='bot-field' netlify>
             <p>
                 <label>Your Name: <input type="text" name="name" required/></label>   
             </p>
