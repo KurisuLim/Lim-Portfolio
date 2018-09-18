@@ -1,45 +1,54 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import  "./contact-css-modules.module.css";
 
 class Contact extends React.Component {
-    render() {
-        return (
-    <div>
-        <h2>Contact Form</h2>
-        <form name="contact-form" method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify
-        >
-        <input
-        name='name'
-        type='text'
-        placeholder='Your Name'
-        required
-        />
-        <br/>
-        <input
-        name='email'
-        type='email'
-        placeholder='name@name.com'
-        required
-        />
-        <br/>
-        <textarea
-        name='message'
-        type='text'
-        placeholder='Message'
-        required
-        />
-        <br/>
-        <div data-netlify-recaptcha></div>
-        <button
-        type='submit'>
-            Send Message
-        </button>
+    constructor(){
+        super()
+        this.state ={
+
+        }
+        this.myMap = this.myMap.bind(this);
+    }
+myMap() {
+    var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {center: myCenter, zoom: 12};
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+}
+
+render() {
+    return (
+        <div class='container'>
+            <div style={{ textAlign:`center`}}>
+                <h2>Contact Us</h2>
+                <p>Swing by for a cup of coffee, or leave us a message:</p>
+            </div>
+        <div class='row'>
+            <div class='column'>
+                <div id='map' style={{width:`100%`, height:`500px`}}></div>
+            </div>
+        <div class='column'>
+        <form name="contact" method="POST" netlify>
+            <p>
+                <label>Your Name: <input type="text" name="name" required/></label>   
+            </p>
+            <p>
+                <label>Your Email: <input type="email" name="email" required/></label>
+            </p>
+            <p>
+                <label>Message: <textarea name="message" style={{height:`170px`}} required></textarea></label>
+            </p>
+            <p>
+                <input type="submit" value='Submit'/>
+            </p>
         </form>
-    </div>
+        </div>
+        </div>
+        </div>
         )
     }
 }
+
 export default Contact;
