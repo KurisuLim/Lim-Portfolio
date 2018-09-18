@@ -30,7 +30,7 @@ render() {
                 <div id='map' style={{width:`100%`, height:`500px`}}></div>
             </div>
         <div class='column'>
-        <form name="contact" method="POST" netlify>
+        <form name="contact-form" method="POST" netlify>
             <p>
                 <label>Your Name: <input type="text" name="name" required/></label>   
             </p>
