@@ -6,14 +6,14 @@ class Contact extends React.Component {
 
 render() {
     return (
-        <div class='container'>
+        <div className='container'>
             <div style={{ textAlign:`center`}}>
                 <h2>Contact</h2>
                 <p>Swing by for a cup of coffee, or leave me a message:</p>
             </div>
-        <div class='row'>
-        <div class='column'>
-        <form name="contact-forms" method="POST" data-netlify='true' data-netlify-honeypot='bot-field' netlify>
+        <div className='row'>
+        <div className='column'>
+        <form name="contact-forms" method="POST" data-netlify='true' data-netlify-honeypot='bot-field'>
             <p>
                 <label>Your Name: <input type="text" name="name" required/></label>   
             </p>
