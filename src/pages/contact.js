@@ -1,22 +1,17 @@
 import React from 'react'
 import  "./contact-css-modules.module.css";
+import GoogleMapReact from 'google-map-react';
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class Contact extends React.Component {
-    constructor(){
-        super()
-        this.state ={
-
-        }
-        this.myMap = this.myMap.bind(this);
-    }
-myMap() {
-    var myCenter = new google.maps.LatLng(51.508742,-0.120850);
-    var mapCanvas = document.getElementById("map");
-    var mapOptions = {center: myCenter, zoom: 12};
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-    var marker = new google.maps.Marker({position:myCenter});
-    marker.setMap(map);
-}
+    static defaultProps = {
+        center: {
+        lat: 59.95,
+        lng: 30.33
+    },
+    zoom: 11
+    };
 
 render() {
     return (
@@ -27,7 +22,19 @@ render() {
             </div>
         <div class='row'>
             <div class='column'>
-                <div id='map' style={{width:`100%`, height:`500px`}}></div>
+            <div style={{ height: '100vh', width: '100%' }}>
+                <GoogleMapReact
+                bootstrapURLKeys={{ key: `${process.env.GOOGLE_API}` }}
+                defaultCenter={this.props.center}
+                defaultZoom={this.props.zoom}
+                >
+                <AnyReactComponent
+                    lat={59.955413}
+                    lng={30.337844}
+                    text={'Kreyser Avrora'}
+                />
+                </GoogleMapReact>
+            </div>
             </div>
         <div class='column'>
         <form name="contact-form" method="POST" netlify>
